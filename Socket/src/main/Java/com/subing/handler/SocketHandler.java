@@ -31,7 +31,7 @@ public class SocketHandler {
         l = socketService.selectHum();
         System.out.println("LLLLL" + l.get(0).getValue());
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("hum", l);
+        map.put("hum", l.get(0).getValue());
         return map;
     }
 

@@ -10,13 +10,14 @@ $(document).ready(function() {
                 dataType: "json",
                 success: function f(data) {
                     //  alert(data.hum)
-                    for (var obj in data.hum) {
+                    /*for (var obj in data.hum) {
 
                         var v = data.hum[obj].value;
                         //console.log(v)
                         stack.push(v);
                         //randomData();
-                    }
+                    }*/
+                    stack.push(data.hum)
 
                 }
             }
