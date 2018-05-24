@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.subing.dao.SocketDao">
+   <select id="selectHum" resultType="com.subing.po.Hum">
+       SELECT *from hum ORDER BY humid DESC LIMIT 0,1
+   </select>
+    <select id="selectTemp" resultType="com.subing.po.Temp">
+        SELECT *from temp ORDER BY tempid DESC LIMIT 0,1
+    </select>
+    <select id="selectLight" resultType="com.subing.po.Light">
+        SELECT *from light ORDER BY lightid DESC LIMIT 0,1
+    </select>
+    <select id="selectSmoke" resultType="com.subing.po.Smock">
+        SELECT *from smock ORDER BY smockid DESC LIMIT 0,1
+    </select>
+</mapper>
