@@ -4,15 +4,15 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.subing.dao.SocketDao">
    <select id="selectHum" resultType="com.subing.po.Hum">
-       SELECT *from hum ORDER BY humid DESC LIMIT 0,1
+       select *from hum where humid=(SELECT max(humid) from hum)
    </select>
     <select id="selectTemp" resultType="com.subing.po.Temp">
-        SELECT *from temp ORDER BY tempid DESC LIMIT 0,1
+        select *from temp where tempid=(SELECT max(tempid) from hum)
     </select>
     <select id="selectLight" resultType="com.subing.po.Light">
-        SELECT *from light ORDER BY lightid DESC LIMIT 0,1
+        select *from light where lightid=(SELECT max(lightid) from hum)
     </select>
     <select id="selectSmoke" resultType="com.subing.po.Smock">
-        SELECT *from smock ORDER BY smockid DESC LIMIT 0,1
+        select *from smock where smockid=(SELECT max(smockid) from hum)
     </select>
 </mapper>
