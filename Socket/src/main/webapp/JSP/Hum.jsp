@@ -12,7 +12,6 @@
     <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../js/echarts.js"></script>
     <script type="text/javascript" src="../js/Hum.js" charset="UTF-8"></script>
-</head>
 <body>
 <div style="height:410px;min-height:100px;margin:0 auto;" id="Hum"></div>
 </body>

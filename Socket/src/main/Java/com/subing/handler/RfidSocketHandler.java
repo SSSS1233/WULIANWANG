@@ -31,4 +31,12 @@ public class RfidSocketHandler {
         map.put("type",rfid.getType());
         return map;
     }
+    @ResponseBody
+    @RequestMapping(value = "/JSP/delete")
+    public Map<String,Object> delete()
+    {
+        Map<String,Object> map=new HashMap<String, Object>();
+        System.out.println("close+++");
+        return map;
+    }
 }
