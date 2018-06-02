@@ -87,7 +87,7 @@ $(document).ready(function() {
     setInterval(function () {
         f1();
         hum=stack.pop();
-        console.log(hum);
+
         for (var i = 0; i < 5; i++) {
             data.shift();
 
