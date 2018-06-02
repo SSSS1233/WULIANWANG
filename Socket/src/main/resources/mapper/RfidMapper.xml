@@ -6,4 +6,7 @@
     <select id="select" resultType="com.subing.po.Rfid">
         SELECT *from rfiddata where id=(select max(id) from rfiddata)
     </select>
+    <delete id="delete">
+        TRUNCATE TABLE rfiddata
+    </delete>
 </mapper>

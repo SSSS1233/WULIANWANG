@@ -25,10 +25,13 @@ public class RfidSocketHandler {
     @RequestMapping(value = "/JSP/rfid")
     public Map<String,Object> choose()
     {
+
         Map<String,Object> map=new HashMap<String, Object>();
         Rfid rfid=rfidService.select();
         System.out.println(rfid);
+        if(rfid!=null)
         map.put("type",rfid.getType());
+        rfidService.delete();
         return map;
     }
     @ResponseBody

@@ -11,4 +11,5 @@ import com.subing.po.Rfid;
  */
 public interface RfidDao {
     public Rfid select();
+    public void delete();
 }

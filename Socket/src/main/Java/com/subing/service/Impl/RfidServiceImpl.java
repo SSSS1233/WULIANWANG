@@ -20,4 +20,8 @@ public class RfidServiceImpl implements RfidService{
     public Rfid select() {
         return dao.select();
     }
+
+    public void delete() {
+         dao.delete();
+    }
 }

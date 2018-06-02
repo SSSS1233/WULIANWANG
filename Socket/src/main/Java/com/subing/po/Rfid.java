@@ -4,7 +4,7 @@ package com.subing.po;
 public class Rfid {
 
   private int id;
-  private long card_id;
+  private String card_id;
   private String type;
 
 
@@ -16,11 +16,11 @@ public class Rfid {
     this.id = id;
   }
 
-  public long getCard_id() {
+  public String getCard_id() {
     return card_id;
   }
 
-  public void setCard_id(long card_id) {
+  public void setCard_id(String card_id) {
     this.card_id = card_id;
   }
 

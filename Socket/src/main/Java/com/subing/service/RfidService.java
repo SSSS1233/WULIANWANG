@@ -14,4 +14,5 @@ import javax.transaction.Transactional;
 @Transactional
 public interface RfidService {
     public Rfid select();
+    public void delete();
 }

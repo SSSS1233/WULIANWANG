@@ -10,7 +10,7 @@
 <head>
     <script src="../js/jquery-1.9.1.min.js"></script>
     <script>
-        var temp = '';
+        var t = '';
         /**
          * 使用indexOf判断元素是否存在于数组中
          * @param {Object} arr 数组
@@ -25,7 +25,7 @@
             }
             return false;
         }
-        var stack = [];
+        //var stack = [];
         function f1() {
             $.ajax({
                     url: "/JSP/rfid",
@@ -55,7 +55,7 @@
                          window.open("http://localhost:8090/JSP/Light.jsp");
 
                          }*/
-                        if (temp != data.type) {
+                        if (t != data.type) {
                             if (data.type == 'temp') {
                                 // alert("PPP")
                                 window.open("http://localhost:8090/JSP/Temp.jsp");
@@ -71,11 +71,11 @@
                                 window.open("http://localhost:8090/JSP/Light.jsp");
 
                             }
-                            temp=data.type;
+                            t=data.type;
                         }
 
 
-                        stack.push(data.type)
+                       // stack.push(data.type)
                     }
                 }
             )

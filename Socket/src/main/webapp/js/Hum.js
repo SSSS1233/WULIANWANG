@@ -87,19 +87,18 @@ $(document).ready(function() {
     setInterval(function () {
         f1();
         hum=stack.pop();
-        console.log(hum)
+        console.log(hum);
         for (var i = 0; i < 5; i++) {
             data.shift();
 
 
             data.push(randomData());
         }
-
         myChart.setOption({
             series: [{
                 data: data
             }]
         });
-    }, 1000);
+    }, 300);
     myChart.setOption(option);
 })
