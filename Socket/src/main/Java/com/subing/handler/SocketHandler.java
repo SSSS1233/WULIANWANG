@@ -1,5 +1,6 @@
 package com.subing.handler;
 
+import com.subing.dao.SocketsDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,15 +24,17 @@ import java.util.Map;
 public class SocketHandler {
     @Autowired
     SocketService socketService;
-
+    @Autowired
+    SocketsDao dao;
     @RequestMapping(value = "/JSP/selectHum")
     @ResponseBody
     public Map<String, Object> selectHum() {
         List<Hum> l = new ArrayList<Hum>();
-        l = socketService.selectHum();
-        System.out.println("LLLLL" + l.get(0).getValue());
+       // l = socketService.selectHum();
+       int hum= dao.selectHum();
         Map<String, Object> map = new HashMap<String, Object>();
-        map.put("hum", l.get(0).getValue());
+       // map.put("hum", l.get(0).getValue());
+        map.put("hum",hum);
         return map;
     }
 
@@ -39,7 +42,8 @@ public class SocketHandler {
     @ResponseBody
     public Map<String, Object> selectTemp() {
         Map<String, Object> map = new HashMap<String, Object>();
-        int temp=socketService.selectTemp().getValue();
+        //int temp=socketService.selectTemp().getValue();
+        int temp=dao.selectTemp();
         map.put("temp",temp);
         return  map;
     }
@@ -47,7 +51,8 @@ public class SocketHandler {
     @ResponseBody
     public Map<String, Object> selectLight() {
         Map<String, Object> map = new HashMap<String, Object>();
-        int light=socketService.selectLight().getValue();
+       // int light=socketService.selectLight().getValue();
+        int light=dao.selectLight();
         map.put("light",light);
         return  map;
     }
@@ -55,7 +60,8 @@ public class SocketHandler {
     @ResponseBody
     public Map<String, Object> selectSmoke() {
         Map<String, Object> map = new HashMap<String, Object>();
-        int smoke=socketService.selectSmoke().getValue();
+        //int smoke=socketService.selectSmoke().getValue();
+        int smoke=dao.selectSmoke();
         map.put("smoke",smoke);
         return  map;
     }

@@ -15,7 +15,6 @@ import java.util.List;
  * @Date 2018/5/22 15:03.
  * @Comment
  */
-@Transactional
 public interface SocketService {
     public List<Hum> selectHum();
     public Temp selectTemp();

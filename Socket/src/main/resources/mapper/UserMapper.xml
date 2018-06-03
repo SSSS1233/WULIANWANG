@@ -7,12 +7,12 @@
        select *from hum where humid=(SELECT max(humid) from hum)
    </select>
     <select id="selectTemp" resultType="com.subing.po.Temp">
-        select *from temp where tempid=(SELECT max(tempid) from hum)
+        select *from temp where tempid=(SELECT max(tempid) from temp)
     </select>
     <select id="selectLight" resultType="com.subing.po.Light">
-        select *from light where lightid=(SELECT max(lightid) from hum)
+        select *from light where lightid=(SELECT max(lightid) from light)
     </select>
     <select id="selectSmoke" resultType="com.subing.po.Smock">
-        select *from smock where smockid=(SELECT max(smockid) from hum)
+        select *from smock where smockid=(SELECT max(smockid) from smock)
     </select>
 </mapper>

@@ -60,7 +60,7 @@
         }
         setInterval(function () {
             f1();
-        }, 500);
+        }, 1000);
 	</script>
 </head>
 <body>

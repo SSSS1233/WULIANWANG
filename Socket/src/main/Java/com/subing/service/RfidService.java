@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
  * @Date 2018/5/27 17:33.
  * @Comment
  */
-@Transactional
+
 public interface RfidService {
     public Rfid select();
     public void delete();
