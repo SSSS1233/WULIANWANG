@@ -13,6 +13,6 @@
         select *from light where lightid=(SELECT max(lightid) from light)
     </select>
     <select id="selectSmoke" resultType="com.subing.po.Smock">
-        select *from smock where smockid=(SELECT max(smockid) from smock)
+        select *from smoke where smokeid=(SELECT max(smokeid) from smoke)
     </select>
 </mapper>

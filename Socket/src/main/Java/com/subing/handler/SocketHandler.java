@@ -63,6 +63,7 @@ public class SocketHandler {
         //int smoke=socketService.selectSmoke().getValue();
         int smoke=dao.selectSmoke();
         map.put("smoke",smoke);
+        System.out.println(smoke+"OOOO");
         return  map;
     }
 

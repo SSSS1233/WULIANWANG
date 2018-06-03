@@ -43,8 +43,8 @@ public class SocketsDao {
         String sql="select *from smoke where smokeid=(SELECT max(smokeid) from smoke)";
         List<Object[]> l=DBTools.excuteQuery(sql);
         Object[] o=l.get(0);
-        int temp=(Integer)o[2];
-        return temp;
+        int smoke=(Integer)o[2];
+        return smoke;
     }
     public String selectrfid()
     {

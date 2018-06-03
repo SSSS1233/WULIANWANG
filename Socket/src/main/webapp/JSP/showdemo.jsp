@@ -21,18 +21,20 @@
                     dataType: "json",
                     success: function f(data) {
                         console.log(data.type);
-                        if (t != data.type) {
+
                             if (data.type == 'temp') {
                                 // alert("PPP")
 								///$("#font").innerText("检测到温度卡");
                                 document.getElementById('ppp').innerHTML="检测到温度卡";
                                 //setTimeout("textFunction()",3000);
+								alert("检测到温度卡");
                                 window.open("http://localhost:8090/JSP/Temp.jsp");
                             } else if (data.type == 'smoke') {
                                 //alert("LLL");
                                 //$("#font").innerText="检测到酒精卡";
                                 document.getElementById('ppp').innerHTML="检测到酒精卡";
-                                //setTimeout("textFunction()",3000);
+                               // setTimeout("textFunction()",3000);
+								alert("检测到酒精卡");
                                 window.open("http://localhost:8090/JSP/Smoke.jsp");
                                 // win.location.reload();
                             } else if (data.type == 'hum') {
@@ -40,17 +42,18 @@
                               //  $("#font").innerText="检测到湿度卡";
                                 document.getElementById('ppp').innerHTML="检测到湿度卡";
                                // setTimeout("textFunction()",3000);
+								alert("检测到湿度卡");
                                 window.open("http://localhost:8090/JSP/Hum.jsp");
                             } else if (data.type == 'light') {
                                 //alert("MMM");
                                // $("#font").innerText="检测到光照卡";
                                 document.getElementById('ppp').innerHTML="检测到光照卡";
-                              //  alert("检测到光照卡");
+                                alert("检测到光照卡");
                                 window.open("http://localhost:8090/JSP/Light.jsp");
 
                             }
-                            t=data.type;
-                        }
+                           // t=data.type;
+
 
 
                         // stack.push(data.type)
